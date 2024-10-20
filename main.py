@@ -27,3 +27,18 @@ class Store:
 
     def __str__(self):
         return f"Магазин: {self.name}, Адрес: {self.address}, Ассортимент: {self.items}"
+
+
+
+    store1 = Store("Fruit Paradise", "123 Main St")
+    store2 = Store("Tech Haven", "456 Tech Blvd")
+    store3 = Store("Book World", "789 Book Ave")
+
+    store1.add_item("apples", 0.5)
+    store1.add_item("bananas", 0.75)
+
+    store2.add_item("laptop", 1000)
+    store2.add_item("smartphone", 600)
+
+    store3.add_item("novel", 15)
+    store3.add_item("textbook", 40)
