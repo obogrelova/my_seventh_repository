@@ -10,7 +10,7 @@ class Store:
 
     def remove_item(self, item_name):
         if item_name in self.items:
-            del self.item[item_name]
+            del self.items[item_name]
             print(f"Товар '{item_name}' удален.")
         else:
             print(f"Товар '{item_name}' не найден.")
@@ -30,35 +30,35 @@ class Store:
 
 
 
-    store1 = Store("Fruit Paradise", "123 Main St")
-    store2 = Store("Tech Haven", "456 Tech Blvd")
-    store3 = Store("Book World", "789 Book Ave")
+store1 = Store("Fruit Paradise", "123 Main St")
+store2 = Store("Tech Haven", "456 Tech Blvd")
+store3 = Store("Book World", "789 Book Ave")
 
-    store1.add_item("apples", 0.5)
-    store1.add_item("bananas", 0.75)
+store1.add_item("apples", 0.5)
+store1.add_item("bananas", 0.75)
 
-    store2.add_item("laptop", 1000)
-    store2.add_item("smartphone", 600)
+store2.add_item("laptop", 1000)
+store2.add_item("smartphone", 600)
 
-    store3.add_item("novel", 15)
-    store3.add_item("textbook", 40)
+store3.add_item("novel", 15)
+store3.add_item("textbook", 40)
 
 
 
-    print(store1)
+print(store1)
 
-    store1.add_item("oranges", 0.65)
+store1.add_item("oranges", 0.65)
 
-    store1.update_price("bananas", 0.80)
+store1.update_price("bananas", 0.80)
 
-    price = store1.get_price("apples")
-    print(f"Цена на 'apples': {price}.")
+price = store1.get_price("apples")
+print(f"Цена на 'apples': {price}")
 
-    price = store1.get_price("pears")
-    print(f"Цена на 'pears': {price}.")
+price = store1.get_price("pears")
+print(f"Цена на 'pears': {price}")
 
-    store1.remove_item("oranges")
+store1.remove_item("oranges")
 
-    store1.remove_item("pears")
+store1.remove_item("pears")
 
-    print(store1)
+print(store1)
