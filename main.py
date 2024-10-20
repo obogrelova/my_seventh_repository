@@ -42,3 +42,23 @@ class Store:
 
     store3.add_item("novel", 15)
     store3.add_item("textbook", 40)
+
+
+
+    print(store1)
+
+    store1.add_item("oranges", 0.65)
+
+    store1.update_price("bananas", 0.80)
+
+    price = store1.get_price("apples")
+    print(f"Цена на 'apples': {price}.")
+
+    price = store1.get_price("pears")
+    print(f"Цена на 'pears': {price}.")
+
+    store1.remove_item("oranges")
+
+    store1.remove_item("pears")
+
+    print(store1)
