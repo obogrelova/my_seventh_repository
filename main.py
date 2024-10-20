@@ -9,25 +9,24 @@ class Store:
         print(f"Товар '{item_name}' добавлен с ценой {price}.")
 
     def remove_item(self, item_name):
-        if item_name in self.items:
-            del self.items[item_name]
+        if item_name in self.item:
+            del self.item[item_name]
             print(f"Товар '{item_name}' удален.")
         else:
             print(f"Товар '{item_name}' не найден.")
 
     def get_price(self, item_name):
-        return self.items.get(item_name, None)
+        return self.item.get(item_name, None)
 
     def update_price(self, item_name, new_price):
-        if item_name in self.items:
-            self.items[item_name] = new_price
+        if item_name in self.item:
+            self.item[item_name] = new_price
             print(f"Цена товара '{item_name}' обновлена на {new_price}.")
         else:
             print(f"Товар '{item_name}' не найден.")
 
     def __str__(self):
-        return f"Магазин: {self.name}, Адрес: {self.address}, Ассортимент: {self.items}"
-
+        return f"Магазин: {self.name}, Адрес: {self.address}, Ассортимент: {self.item}"
 
 
 store1 = Store("Fruit Paradise", "123 Main St")
@@ -42,8 +41,6 @@ store2.add_item("smartphone", 600)
 
 store3.add_item("novel", 15)
 store3.add_item("textbook", 40)
-
-
 
 print(store1)
 
@@ -62,3 +59,5 @@ store1.remove_item("oranges")
 store1.remove_item("pears")
 
 print(store1)
+
+
