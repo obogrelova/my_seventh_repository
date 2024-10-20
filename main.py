@@ -59,5 +59,3 @@ store1.remove_item("oranges")
 store1.remove_item("pears")
 
 print(store1)
-
-
